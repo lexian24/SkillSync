@@ -1,0 +1,185 @@
+{
+    "designSystem": {
+      "tokens": {
+        "colors": {
+          "background": "#FFFFFF",
+          "surface": "#F9F9F9",
+          "primary": "#000000",
+          "primaryVariant": "#1A1A1A",
+          "secondary": "#4A4A4A",
+          "border": "#E1E1E1",
+          "accent": "#000000",
+          "textPrimary": "#000000",
+          "textSecondary": "#4A4A4A",
+          "textOnPrimary": "#FFFFFF",
+          "shadow": "rgba(0, 0, 0, 0.1)"
+        },
+        "typography": {
+          "fontFamily": "San Francisco, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+          "sizes": {
+            "h1": 24,
+            "h2": 20,
+            "body": 16,
+            "small": 14,
+            "caption": 12
+          },
+          "weights": {
+            "regular": 400,
+            "medium": 500,
+            "bold": 600
+          },
+          "lineHeights": {
+            "h1": 32,
+            "body": 24,
+            "small": 20
+          }
+        },
+        "spacing": {
+          "none": 0,
+          "xs": 4,
+          "sm": 8,
+          "md": 16,
+          "lg": 24,
+          "xl": 32
+        },
+        "radii": {
+          "sm": 4,
+          "md": 8,
+          "lg": 16,
+          "pill": 9999
+        },
+        "shadows": {
+          "level1": "0px 1px 3px rgba(0,0,0,0.1)",
+          "level2": "0px 4px 8px rgba(0,0,0,0.1)"
+        },
+        "icons": {
+          "style": "outline",
+          "size": 24
+        }
+      },
+      "components": {
+        "SearchBar": {
+          "height": 40,
+          "backgroundColor": "{tokens.colors.surface}",
+          "borderRadius": "{tokens.radii.md}",
+          "paddingHorizontal": "{tokens.spacing.md}",
+          "icon": {
+            "position": "left",
+            "size": 20,
+            "color": "{tokens.colors.secondary}"
+          },
+          "filterButton": {
+            "size": 32,
+            "backgroundColor": "{tokens.colors.primaryVariant}",
+            "iconColor": "{tokens.colors.textOnPrimary}",
+            "borderRadius": "{tokens.radii.pill}"
+          }
+        },
+        "TabChips": {
+          "containerSpacing": "{tokens.spacing.sm}",
+          "chip": {
+            "paddingVertical": "{tokens.spacing.xs}",
+            "paddingHorizontal": "{tokens.spacing.md}",
+            "borderRadius": "{tokens.radii.lg}",
+            "borderWidth": 1,
+            "borderColor": "{tokens.colors.border}",
+            "backgroundColor": "{tokens.colors.background}",
+            "textColor": "{tokens.colors.textPrimary}",
+            "selected": {
+              "backgroundColor": "{tokens.colors.primary}",
+              "textColor": "{tokens.colors.textOnPrimary}",
+              "borderColor": "{tokens.colors.primary}"
+            }
+          }
+        },
+        "Card": {
+          "backgroundColor": "{tokens.colors.surface}",
+          "borderRadius": "{tokens.radii.lg}",
+          "shadow": "{tokens.shadows.level1}",
+          "padding": "{tokens.spacing.md}",
+          "image": {
+            "aspectRatio": "16:9",
+            "cornerRadius": "{tokens.radii.md}"
+          },
+          "overlayGradient": {
+            "start": "transparent",
+            "end": "rgba(0,0,0,0.5)",
+            "direction": "vertical"
+          },
+          "title": {
+            "typography": "h2",
+            "color": "{tokens.colors.textOnPrimary}"
+          },
+          "subtitle": {
+            "typography": "body",
+            "color": "{tokens.colors.textOnPrimary}"
+          },
+          "actionButton": {
+            "type": "icon",
+            "size": 32,
+            "backgroundColor": "{tokens.colors.primaryVariant}",
+            "iconColor": "{tokens.colors.textOnPrimary}",
+            "borderRadius": "{tokens.radii.pill}"
+          }
+        },
+        "Button": {
+          "primary": {
+            "backgroundColor": "{tokens.colors.primary}",
+            "textColor": "{tokens.colors.textOnPrimary}",
+            "borderRadius": "{tokens.radii.lg}",
+            "paddingVertical": "{tokens.spacing.sm}",
+            "paddingHorizontal": "{tokens.spacing.lg}",
+            "typography": "body",
+            "shadow": "{tokens.shadows.level1}"
+          },
+          "secondary": {
+            "backgroundColor": "{tokens.colors.surface}",
+            "textColor": "{tokens.colors.primary}",
+            "border": "1px solid {tokens.colors.primary}",
+            "borderRadius": "{tokens.radii.md}",
+            "typography": "body"
+          }
+        },
+        "BottomNavigation": {
+          "height": 64,
+          "backgroundColor": "{tokens.colors.primaryVariant}",
+          "iconSize": 24,
+          "activeTint": "{tokens.colors.textOnPrimary}",
+          "inactiveTint": "{tokens.colors.secondary}",
+          "borderTop": "1px solid {tokens.colors.border}"
+        },
+        "Avatar": {
+          "size": 32,
+          "borderRadius": "{tokens.radii.pill}",
+          "border": "1px solid {tokens.colors.border}"
+        },
+        "Badge": {
+          "type": "pill",
+          "backgroundColor": "{tokens.colors.background}",
+          "textColor": "{tokens.colors.textPrimary}",
+          "border": "1px solid {tokens.colors.border}",
+          "paddingHorizontal": "{tokens.spacing.sm}",
+          "paddingVertical": "{tokens.spacing.xs}"
+        },
+        "TabBar": {
+          "container": {
+            "backgroundColor": "{tokens.colors.surface}",
+            "paddingVertical": "{tokens.spacing.sm}"
+          },
+          "tab": {
+            "paddingHorizontal": "{tokens.spacing.lg}",
+            "typography": "body",
+            "textColor": "{tokens.colors.textSecondary}",
+            "selected": {
+              "textColor": "{tokens.colors.textPrimary}",
+              "underline": {
+                "height": 2,
+                "color": "{tokens.colors.primary}"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

@@ -82,9 +82,9 @@ const pricingTiers = [
     features: [
       'Payout capped at 20% of monthly wage',
       'Maximum payout: $2,500',
-      'Coverage duration: 3 months',
-      'Yearly career reviews',
-      'AI-powered career guidance'
+      '3-month payout',
+      '60-day deferment',
+      'Course Subsidy up to 40%'
     ]
   },
   {
@@ -96,9 +96,9 @@ const pricingTiers = [
     features: [
       'Payout capped at 40% of monthly wage',
       'Maximum payout: $5,000',
-      'Coverage duration: 3 months',
-      'Quarterly career reviews',
-      'AI-powered career guidance'
+      '3-month payout',
+      '60-day deferment',
+      'Course Subsidy up to 50%'
     ]
   },
   {
@@ -110,18 +110,18 @@ const pricingTiers = [
     features: [
       'Payout capped at 60% of monthly wage',
       'Maximum payout: $7,500',
-      'Coverage duration: 5 months',
-      'Monthly career reviews',
-      'Executive career coaching'
+      '5-month payout',
+      '60-day deferment',
+      'Course Subsidy up to 70%'
     ]
   }
 ];
 
 const reskillingTiers = [
   { name: 'Aware', discount: 1, pathways: 1, color: '#F59E0B' },
-  { name: 'Ready', discount: 2, pathways: 2, color: '#3B82F6' },
-  { name: 'Adapter', discount: 3, pathways: 3, color: '#8B5CF6' },
-  { name: 'Shaper', discount: 4, pathways: 4, color: '#10B981' }
+  { name: 'Ready', discount: 3, pathways: 2, color: '#3B82F6' },
+  { name: 'Adapter', discount: 6, pathways: 3, color: '#8B5CF6' },
+  { name: 'Shaper', discount: 10, pathways: 4, color: '#10B981' }
 ];
 
 // Pricing calculation function
@@ -190,7 +190,7 @@ const Courses: React.FC<CoursesProps> = ({ onBackToResults, userSalary = 5000 })
               mb: 1
             }}
           >
-            Career Protection Insurance
+            Skill Sync Insurance
           </Typography>
           
           <Typography
@@ -407,7 +407,7 @@ const Courses: React.FC<CoursesProps> = ({ onBackToResults, userSalary = 5000 })
             mb: 4
           }}
         >
-          {isPurchased ? 'Recommended Courses' : 'Course Preview'}
+          {isPurchased ? 'Recommended Courses' : 'Recommended Courses'}
         </Typography>
 
         {/* Courses Grid */}
@@ -490,7 +490,7 @@ const Courses: React.FC<CoursesProps> = ({ onBackToResults, userSalary = 5000 })
                             <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
                           </svg>
                           <span style="font-size: 0.7rem; margin-top: 8px; color: rgba(255,255,255,0.6);">
-                            Course Preview
+                            Pathway Preview
                           </span>
                         </div>
                       `;
@@ -656,7 +656,7 @@ const Courses: React.FC<CoursesProps> = ({ onBackToResults, userSalary = 5000 })
               fontSize: { xs: '1.5rem', sm: '2rem' }
             }}
           >
-            🎓 Reskilling Incentive
+            Reskilling Incentive
           </Typography>
 
           <Typography

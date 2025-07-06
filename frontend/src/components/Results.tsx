@@ -258,7 +258,7 @@ const Results: React.FC<ResultsProps> = ({ result, onReset, onViewCourses }) => 
             }}
           >
             <Typography variant="h6" gutterBottom sx={{ color: '#FFFFFF', fontWeight: 'bold' }}>
-              AI Analysis & Recommendations
+              Skill Sync Analysis
             </Typography>
             <Divider sx={{ mb: 2, borderColor: 'rgba(255, 255, 255, 0.2)' }} />
             <Typography

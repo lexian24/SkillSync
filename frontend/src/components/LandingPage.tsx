@@ -166,7 +166,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onStartAssessment }) => {
               }
             }}
           >
-            NOW →
+            START NOW →
           </Button>
         </motion.div>
 
@@ -189,7 +189,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onStartAssessment }) => {
               lineHeight: 1.6
             }}
           >
-            Discover your career potential with our AI-powered assessment. 
+            Discover your career potential with Skill Sync assessment. 
             Get personalized insights and recommendations for your professional journey.
           </Typography>
         </motion.div>

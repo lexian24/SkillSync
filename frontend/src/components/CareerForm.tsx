@@ -30,11 +30,11 @@ const CareerForm: React.FC<CareerFormProps> = ({ onSubmit }) => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [answers, setAnswers] = useState({
-    age: '', gender: '', maritalStatus: '', citizenship: '',
+    age: '', gender: '', citizenship: '',
     education: '', certifications: '',
     currentRole: '', company: '', industry: '', salaryRange: '', location: '', experience: '',
     technicalSkills: '3', communicationSkills: '3', problemSolving: '3', leadership: '3',
-    teamwork: '3', workLifeBalance: '3', stressManagement: '3', careerGrowth: '3',
+    teamwork: '3',
     roleSkills: '', personalSkills: '', interests: '', strengths: '',
   });
 
@@ -260,7 +260,6 @@ const CareerForm: React.FC<CareerFormProps> = ({ onSubmit }) => {
               {[
                 { name: 'age', label: 'Age', options: ['18-24', '25-34', '35-44', '45-54', '55-64', '65+'] },
                 { name: 'gender', label: 'Gender', options: ['male', 'female', 'other'] },
-                { name: 'maritalStatus', label: 'Marital Status', options: ['single', 'married', 'divorced', 'widowed'] },
                 { name: 'citizenship', label: 'Citizenship', options: ['citizen', 'permanent_resident', 'work_permit', 'student_visa'] }
               ].map((field) => (
                 <Grid item xs={12} sm={6} key={field.name}>
@@ -373,7 +372,7 @@ const CareerForm: React.FC<CareerFormProps> = ({ onSubmit }) => {
                     <MenuItem value="" disabled sx={{ color: 'rgba(255, 255, 255, 0.5)' }}>
                       Select Education Level
                     </MenuItem>
-                    {['High School', 'Associate Degree', "Bachelor's Degree", "Master's Degree", 'Doctorate'].map((level) => (
+                    {['High School', 'Diploma', "Bachelor", "Master", 'Doctorate'].map((level) => (
                       <MenuItem key={level} value={level.toLowerCase().replace("'s", '').replace(' ', '')}>
                         {level}
                       </MenuItem>
@@ -390,7 +389,7 @@ const CareerForm: React.FC<CareerFormProps> = ({ onSubmit }) => {
                   onChange={handleChange}
                   variant="outlined"
                   placeholder="Separate multiple certifications with commas"
-                  helperText="e.g., PMP, AWS Certified, Google Analytics"
+                  helperText="eg Business, Machanical, Stream(High School)"
                   sx={{
                     '& .MuiInputLabel-root': {
                       color: '#FFFFFF'
@@ -466,7 +465,7 @@ const CareerForm: React.FC<CareerFormProps> = ({ onSubmit }) => {
             <Grid container spacing={2}>
               {[
                 { name: 'roleSkills', label: 'Role Skills', placeholder: 'e.g., JavaScript, Excel, Data Analysis' },
-                { name: 'personalSkills', label: 'Personal Skills', placeholder: 'e.g., Mentoring, Music, Consulting' }
+                { name: 'personalSkills', label: 'Personal Skills', placeholder: 'e.g., Mentoring, Music, Coding' }
               ].map((field) => (
                 <Grid item xs={12} key={field.name}>
                   <TextField
@@ -517,10 +516,7 @@ const CareerForm: React.FC<CareerFormProps> = ({ onSubmit }) => {
                   ['communicationSkills', 'Communication Skills'],
                   ['problemSolving', 'Problem Solving'],
                   ['leadership', 'Leadership'],
-                  ['teamwork', 'Teamwork'],
-                  ['workLifeBalance', 'Work-Life Balance'],
-                  ['stressManagement', 'Stress Management'],
-                  ['careerGrowth', 'Career Growth Potential']
+                  ['teamwork', 'Teamwork']
                 ].map(([key, label]) => (
                   <Grid item xs={12} sm={6} key={key}>
                     {renderRating(key, label)}

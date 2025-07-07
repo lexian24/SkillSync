@@ -97,7 +97,7 @@ const pricingTiers = [
       'Payout capped at 40% of monthly wage',
       'Maximum payout: $5,000',
       '3-month payout',
-      '60-day deferment',
+      '45-day deferment',
       'Course Subsidy up to 50%'
     ]
   },
@@ -111,7 +111,7 @@ const pricingTiers = [
       'Payout capped at 60% of monthly wage',
       'Maximum payout: $7,500',
       '5-month payout',
-      '60-day deferment',
+      '30-day deferment',
       'Course Subsidy up to 70%'
     ]
   }

@@ -53,7 +53,7 @@ const LoadingScreen: React.FC = () => {
               mb: 3
             }}
           >
-            AI is processing your responses and generating personalized insights...
+            SKill Sync is processing your responses and generating insights...
           </Typography>
 
           {/* Animated Loading Dots */}

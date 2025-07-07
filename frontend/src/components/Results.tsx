@@ -20,14 +20,16 @@ interface ResultsProps {
 }
 
 const calculateRiskLevel = (score: number): string => {
-  if (score >= 71) return 'HIGH';
-  if (score >= 41) return 'MEDIUM';
+  if (score >= 85) return 'VERY HIGH';
+  if (score >= 70) return 'HIGH';
+  if (score >= 40) return 'MODERATE';
   return 'LOW';
 };
 
 const getRiskColor = (score: number) => {
-  if (score >= 71) return '#ff4444';
-  if (score >= 41) return '#ffa726';
+  if (score >= 85) return '#a4332f';
+  if (score >= 70) return '#ff4444';
+  if (score >= 40) return '#ffa726';
   return '#10B981';
 };
 
@@ -90,7 +92,7 @@ const Results: React.FC<ResultsProps> = ({ result, onReset, onViewCourses }) => 
             }}
           >
             <Typography variant="h6" gutterBottom sx={{ color: '#FFFFFF', fontWeight: 'bold', textAlign: 'center' }}>
-              Career Risk Score
+              TORS Score
             </Typography>
             <Divider sx={{ mb: 3, borderColor: 'rgba(255, 255, 255, 0.2)' }} />
             
@@ -196,7 +198,7 @@ const Results: React.FC<ResultsProps> = ({ result, onReset, onViewCourses }) => 
                   }}
                 />
                 <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.8)', textAlign: 'center' }}>
-                  Career Displacement Risk
+                  Career Displacement Score
                 </Typography>
               </Box>
             </Box>
@@ -222,15 +224,15 @@ const Results: React.FC<ResultsProps> = ({ result, onReset, onViewCourses }) => 
                     fontWeight: 'bold'
                   }}
                 >
-                  0-40
+                  0-39
                 </Typography>
               </Box>
               <Box sx={{ textAlign: 'center', flex: 1 }}>
                 <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.8)' }}>
-                  Medium Risk
+                  Moderate Risk
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#ffa726' }}>
-                  41-70
+                  40-69
                 </Typography>
               </Box>
               <Box sx={{ textAlign: 'center', flex: 1 }}>
@@ -238,7 +240,15 @@ const Results: React.FC<ResultsProps> = ({ result, onReset, onViewCourses }) => 
                   High Risk
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#ff4444' }}>
-                  71-100
+                  71-84
+                </Typography>
+              </Box>
+              <Box sx={{ textAlign: 'center', flex: 1 }}>
+                <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.8)' }}>
+                  Very High Risk
+                </Typography>
+                <Typography variant="caption" sx={{ color: '#a4332f' }}>
+                  85-100
                 </Typography>
               </Box>
             </Box>

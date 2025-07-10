@@ -83,8 +83,8 @@ const pricingTiers = [
       'Payout capped at 20% of monthly wage',
       'Maximum payout: $2,500',
       '3-month payout',
-      '60-day deferment',
-      'Course Subsidy up to 40%'
+      '120-day deferment',
+      'Pathway Subsidy up to 40%'
     ]
   },
   {
@@ -97,8 +97,8 @@ const pricingTiers = [
       'Payout capped at 40% of monthly wage',
       'Maximum payout: $5,000',
       '3-month payout',
-      '45-day deferment',
-      'Course Subsidy up to 50%'
+      '90-day deferment',
+      'Pathway Subsidy up to 50%'
     ]
   },
   {
@@ -111,8 +111,8 @@ const pricingTiers = [
       'Payout capped at 60% of monthly wage',
       'Maximum payout: $7,500',
       '5-month payout',
-      '30-day deferment',
-      'Course Subsidy up to 70%'
+      '60-day deferment',
+      'Pathway Subsidy up to 70%'
     ]
   }
 ];
@@ -388,7 +388,7 @@ const Courses: React.FC<CoursesProps> = ({ onBackToResults, userSalary = 5000 })
                   mb: 2
                 }}
               >
-                Your career protection is now active. Access all courses below to earn discounts!
+                Your career protection is now active. Access all pathways below to earn discounts!
               </Typography>
             </Box>
           </Paper>
@@ -407,7 +407,7 @@ const Courses: React.FC<CoursesProps> = ({ onBackToResults, userSalary = 5000 })
             mb: 4
           }}
         >
-          {isPurchased ? 'Recommended Courses' : 'Recommended Courses'}
+          {isPurchased ? 'Recommended Pathways' : 'Recommended Pathways'}
         </Typography>
 
         {/* Courses Grid */}
